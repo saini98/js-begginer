@@ -1,0 +1,93 @@
+<!-- 
+    1. In js we can assign a function to variable.
+
+    2. Pass a function as an argument.
+
+    3. Returning Functions
+
+-------------------------------------------------------------------------
+
+    Any function that is passed as an argument is called a callback function.
+
+    A callback is a function that is to be executed after another function has finished executing.
+
+    e.g:- mene apne kisi friend ko call kia and he said i m busy, I'll callback you. so jb tk existing call khtm nhi hogi tb tk wo callback kr nhi skta .so this process is known as callback.
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <script>
+        //  Why we use callback / Issue
+
+        const funA = () => {
+            setTimeout(function(){
+                console.log('This is Function A');
+            },1000)
+            
+        }
+
+        const funB = () => {
+            console.log('This is Function B');
+        }
+
+       // funA(); // return after 5 second.
+        //funB(); // this will call first but we want that funB run after funA.
+
+        // Solution
+
+        const personOne = (friend, callFriend) =>{
+            setTimeout(function() {
+                console.log(`I m busy, I am talking to ${friend}. I'll call you back`);
+                callFriend();
+            }, 3000)
+            
+          
+        }
+
+        const personTwo = () =>
+        {
+            console.log('Hey! how r u?, I call yu back see')
+        }
+
+        personOne('saini', personTwo);
+
+
+
+
+
+
+
+        function call(secondCall)
+        {
+            setTimeout(function(){
+                console.log('this is 1st call');
+                callTwo();
+            },5000)
+            
+        }
+
+       function callTwo(){
+           console.log('This is 2nd call')
+       }
+       
+       call(callTwo)
+
+
+      
+
+     </script>
+
+
+
+ </head>
+ <body>
+     
+ </body>
+ </html>

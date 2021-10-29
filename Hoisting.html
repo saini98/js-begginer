@@ -1,0 +1,92 @@
+<!-- 
+    1.Hoisting is a javascript mechanism where variables and functions declaration are moved to the top 
+      of their scope before the code execution.
+
+    2. Only declaration are hoisted not initialization
+
+    3. Initialization using let and const are not hoisted
+
+    4. function hoisting is not working in parenthesis ( ).
+
+    5. hoisting is not working in function expression.
+        e.g : -
+        sum(10,25);
+        var sum = function(a,b)
+        {
+            add = a+b;
+            console.log(add)
+        }
+
+        Reason:-
+        
+        var sum = undefined;
+        function(a,b);
+        {
+            add = a+b;
+            console.log(add)
+        }
+        sum(10,25)
+
+
+
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+
+     <script>
+        // Function hoisting
+        console.log('Function Hoisting')
+
+
+
+        sum(10,25);
+        var item=10;
+  
+       function sum(a,b)
+       {
+           add = a+b;
+           console.log('Sum', add)
+           
+           console.log(value)
+           var value;
+           value=item;
+           console.log(value)
+       }
+
+       
+
+
+       console.log('')
+       console.log('Variable Hoisting')
+  
+       // Variable Hoisting
+  
+       console.log('value of a is',a) //undefined
+       var a =20;
+       console.log('value of a is',a)
+  
+      //  console.log('const', c) // ERROR
+      //  const c =30;
+  
+  
+      //  console.log('let',b) // ERROR
+      //  let b = 10;
+
+       
+   </script>
+
+
+ </head>
+ <body>
+     <h1>Hoisting</h1>
+ </body>
+ </html>

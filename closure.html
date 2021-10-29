@@ -1,0 +1,16 @@
+<!-- 
+    closure is an action that is inner function can access to the outer function variables / parameters as well as all the global variables.
+ -->
+
+ <script>
+     const closure = (a) =>{
+         let b = 20;
+         const innerFun = () => {
+             let sum = a+b;
+             console.log('Sum is', sum)
+         }
+         innerFun()
+     }
+     closure(10)
+     
+ </script>

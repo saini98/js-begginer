@@ -1,0 +1,37 @@
+
+
+<!-- 
+
+    Question: call student rollno after 2sec then call thier name and age after 2 sec and then call gender after 2 sec
+ -->
+
+
+<script>
+    const hell = () => {
+        setTimeout( () => {
+            console.log('Hi');
+            const rollno = [1,2,3,4,5,6];
+            console.log('Roll No.',rollno[2]);
+
+            setTimeout((rollno) => {
+                const details = {
+                    name: 'Sahil',
+                    age: 23
+                }
+                console.log(`How are you ${details.name}, Are you ${details.age} years old ? `)
+
+                setTimeout( () => {
+                    details.gender = 'Male',
+                    console.log(`Your gender is ${details.gender}`)
+                }, 2000)
+            },2000, rollno[3])
+
+
+
+
+        }, 2000)
+    }
+
+    hell();
+
+</script>

@@ -1,0 +1,41 @@
+<!-- 
+    Higher Order function are functions that take other functions as arguments or return functions as their results.
+
+    Map, Filter, Every, Some they are high order functions.
+ -->
+
+<script>
+    const questions = (name) =>{
+        if(name === 'Saini')
+        {
+            return function(topic){
+                console.log(`Hi ${name}. Explain ${topic}?`);
+
+            }
+        }
+        if(name === 'Sahil')
+        {
+            return function(topic){
+                console.log(`Hi ${name}. Explain ${topic}?`);
+
+            }
+        }
+        if(name === 'Kumar')
+        {
+            return function(topic){
+                console.log(`Hi ${name}. Explain ${topic}?`);
+
+            }
+        }
+        else
+        {
+            return function()
+            {
+                console.log('Welcome to Interview')
+            }
+        }
+    }
+    questions('Saini')('UI');
+    const  student = questions('Saini');
+    student('MAP');
+</script>

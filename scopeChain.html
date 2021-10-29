@@ -1,0 +1,53 @@
+<!-- 
+    1. The Scope Chain is used to resolve the value of variable names in js.
+
+    2. Scope Chain in js is lexically(where we write a function) defined, which means that we can see
+       what the scope chain will be by looking at the code .
+
+    3. Lexical Scoping: Inner function can get access to their parent functions variables . But the 
+        vice versa is not TRUE, means parent functions variable cannot access inner functions variables.
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+
+     <Script>
+
+        var a = "Global variable ";// we can access this variable anywhere in the program.
+
+
+        // Here if we try to access variable a and b then it is not possible.
+
+        function outer()
+        {
+            var b = "outer function variable ";
+            console.log(a)
+            inner();
+            console.log(a,b)
+            function inner()
+            {
+                var c = "inner function variable";
+                console.log(a+b+c)
+            }
+        }
+        outer();
+
+        function all()
+        {
+            var d= "all"
+            console.log(a+b+c+d)
+        }
+
+     </Script>
+
+
+ </head>
+ <body>
+     
+ </body>
+ </html>

@@ -1,0 +1,29 @@
+
+
+<script>
+
+    // Synchronous
+    const sync = () =>{
+        console.log('This is sync Function')
+        call();
+        console.log('This is synchronos function');
+    }
+    const call = () => {
+        console.log('This is Call Function')
+    }
+    sync();
+
+    // Asynchronous
+
+    const async = () =>{
+        console.log('THis is Async Function')
+        setTimeout(() => {
+            console.log('Async Function')
+        }, 2000)
+        
+        call();
+    }
+
+    async();
+
+</script>

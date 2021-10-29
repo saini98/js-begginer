@@ -1,0 +1,90 @@
+<!-- 
+    apply() method is similar to the call() method.
+
+    The call() method takes arguments seperately.
+
+    The apply() method takes arguments as an array.
+ -->
+
+ <!-- <script>
+    const object1= {
+        name: 'Object1',
+        topic: 'Call Method',
+        method: function(title, head){
+            console.log(`This is method of ${this.name} in ${title} ${head}`)
+        }
+    }
+
+    object1.method('Js', 'programming')
+    object2 = {
+        name: 'Object2',
+        topic: 'Call Method'
+    }
+
+    object1.method.apply(object2, ['Java Script', 'Prgramming Language']);
+    // argument 1st is that object in which object we want to call function
+    // argument 2nd  and argument3rd is a parameter passed in object1 in array
+        
+    
+    
+</script>
+ -->
+
+
+
+
+
+<script>
+    const object2 = {
+        name: 'Sahil',
+        age: 23,
+        salary: 15000,
+        increment: 100,
+        totalSalary: function (decrement){
+            console.log('Object2',this)
+            const totalsalary = this.salary + this.increment - decrement;
+            console.log(totalsalary);
+        }
+    }
+    object2.totalSalary(100);
+
+    const object3 = {
+        name: 'Saini',
+        age:22,
+        salary:16000,
+        increment: 100,
+
+    }
+    object2.totalSalary.apply(object3, [100])
+
+    const object4 = {
+        name: 'Kumar',
+        age:22,
+        salary:18000,
+        increment: 100,
+
+    }
+
+    object2.totalSalary.call(object4, 100)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

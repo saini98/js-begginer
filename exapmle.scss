@@ -1,0 +1,115 @@
+@import "mixins";
+
+
+$bg-primary: blue;
+$bg-warning: yellow;
+$bg-dark: black;
+$bg-light: #fff;
+$bg-danger: red;
+
+$text-primary: blue;
+$text-warning: yellow;
+$text-dark: black;
+$text-light: #fff;
+$text-danger: red;
+
+
+
+h1
+{
+    color: $bg-danger;
+    margin: 10px;
+    border: 10px solid black;
+    padding: 10px;
+    text-align: center;
+    align-items: center;    
+    top: 260px;
+    position: relative;
+    
+
+}
+body{
+    background-color: rgb(203, 245, 135);
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.main-container
+{
+    background-color: $text-warning;
+    @include flex;
+    border: 2px solid $bg-primary;
+   
+   
+    .item1{
+        border: 3px solid $bg-light;
+        font-size: 10px + 20px; //  +  operator
+        padding: 10px;
+        margin-left: 10px;
+        box-shadow: 2px 2px 2px 2px $bg-danger;
+        letter-spacing: 10px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05,1.1);
+        }
+       
+    }
+    
+}
+.card1
+{
+    @include cards;
+    position: static;
+}
+.card2
+{
+    @include cards;
+    background-color: $bg-warning;
+    position: relative;
+    p{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        transform: translate(-25px, -25px);
+    }
+  
+}
+.card3
+{
+    @include cards;
+    background-color: $bg-danger;
+    position: sticky;
+    top: 100px;
+    left: 100px
+    
+   
+    
+}
+.card4
+{
+    @include cards;
+    background-color: $bg-dark;
+    color: $text-light;
+    
+   
+  
+}
+
+
+
+
+@media (max-width:768px)
+{
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        
+    }
+    .item1{
+        margin: 10px;
+
+    }
+}

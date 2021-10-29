@@ -1,0 +1,68 @@
+<!-- 
+    The map() method creaates a new array with the results of calling a provided function on every element in the calling array.
+
+    Map calls a provided callback function once for each element in an array, in order, and returns a new array from the results.
+
+    Map method ek new array bna kr deta hai , iske andr hum jo bhi callback function provide krte hai wo hr ek element ke liye execute hota hai or execution ke bad usko array ki form me bna kr return krta hai, or us return array ko hum kisi variable me bhi store kr skte hai.
+
+    map method apne original array ko modify nhi krta.
+
+    Syntax:- map(callback(currentValue, index, array), thisArg)
+ -->
+
+ <script>
+     const array1 = [1,2,3,4,5,6]
+     var array2 = array1.map(function(num) {
+         var value = num*5
+        console.log(value)
+     } )
+
+     const map = [
+         {price:500, product: 'Mobile cover'},
+         {price:1500, product: 'Stand'},
+         {price:5100, product: 'Charger'},
+         {price:200, product: 'Mouse'},
+         {price:3000, product: 'Keyboard'}
+     ]
+     const mapObject = map.map(function(value)
+     {
+         console.log(value)
+         return value.price;
+     })
+
+     console.log(mapObject)
+
+
+
+
+
+
+     const objects = [
+         {name: 'Sahil', age:23},
+         {name: 'Saini', age:26},
+         {name: 'Yogesh', age:30},
+         {name: 'Sonu', age:35},
+         {name: 'Pawan', age:40}
+     ]
+
+     const getObjects = objects.map( (value) => {
+        console.log(value.age)
+        return value.name;
+         
+     })
+     console.log(getObjects)
+ </script>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     
+ </head>
+ <body>
+   
+ </body>
+ </html>

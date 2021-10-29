@@ -1,0 +1,30 @@
+<!-- 
+    The call() method is a predefined js method
+
+    with call() method an object can use a method belonging to another object.
+
+    one object can use another object method using call method
+ -->
+
+ <script>
+      const object1= {
+          name: 'Object1',
+          topic: 'Call Method',
+          method: function(title, head){
+              console.log(`This is method of ${this.name} in ${title} ${head} `)
+          }
+      }
+
+      object1.method('Js', 'programming')
+      object2 = {
+          name: 'Object2',
+          topic: 'Call Method'
+      }
+
+      object1.method.call(object2, 'Java Script', 'Prgramming Language');
+      // argument 1 is that object in which object we want to call function
+      // argument 2 is a parameter passed in object1.
+          
+      
+      
+ </script>

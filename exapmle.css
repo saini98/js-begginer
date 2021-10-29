@@ -1,0 +1,109 @@
+h1 {
+  color: red;
+  margin: 10px;
+  border: 10px solid black;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 260px;
+  position: relative;
+}
+
+body {
+  background-color: #cbf587;
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-container {
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid blue;
+}
+
+.main-container .item1 {
+  border: 3px solid #fff;
+  font-size: 30px;
+  padding: 10px;
+  margin-left: 10px;
+  -webkit-box-shadow: 2px 2px 2px 2px red;
+          box-shadow: 2px 2px 2px 2px red;
+  letter-spacing: 10px;
+  cursor: pointer;
+}
+
+.main-container .item1:hover {
+  -webkit-transform: scale(1.05, 1.1);
+          transform: scale(1.05, 1.1);
+}
+
+.card1 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  position: static;
+}
+
+.card2 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  background-color: yellow;
+  position: relative;
+}
+
+.card2 p {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  -webkit-transform: translate(-25px, -25px);
+          transform: translate(-25px, -25px);
+}
+
+.card3 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  background-color: red;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100px;
+  left: 100px;
+}
+
+.card4 {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  background-color: black;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  .item1 {
+    margin: 10px;
+  }
+}
+/*# sourceMappingURL=exapmle.css.map */

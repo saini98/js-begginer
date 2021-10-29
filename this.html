@@ -1,0 +1,84 @@
+<!-- 
+    1. The js THIS keyword refers to the object it belongs to.
+
+    2. it has different values depend upon where it is used :
+
+        Alone, this refers to the Global Object
+
+        In a regular function , THIS refers to the global object.
+
+        In a Object(methods),  THIS refers to the Owner object
+
+        In a regular function , in strict mode, THIS is undefined
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        console.log(this)
+
+        function sum ()
+        {
+            var add  = 2+3;
+            console.log("Sum " +add);
+            console.log(this.add)
+        }
+        sum();
+
+
+        let details = {
+            name: 'Sahil',
+            age: 23,
+            tech: 'FEEN',
+            subtract: function()
+            {
+                var subtract  = 10-5;
+                console.log("Subtract " +subtract);
+                console.log(this)
+            }
+        }
+        
+        details.subtract()
+
+// Pass by refrence or value
+
+        const arr = [1,2,3,4,5];
+        const arr2 = [...arr];
+        console.log(arr);
+        console.log(arr2);
+
+        arr2.push(6);
+        console.log(arr);
+        console.log(arr2);
+    </script>
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- 
+    Using bind() method,  we can bind an object to a common function, so that the function gives different result when it needs.
+
+    The bind() method takes an object as first argument and create a new function.
+ -->
+
+ <!-- <script>
+     const object = {
+         name: 'Object',
+         topic: 'Bind Function',
+         work: function(title)
+         {
+             console.log(`This is ${this.name} of ${this.topic} in ${title}`)
+         }
+     }
+
+
+     object.work('Js');
+
+
+     //Bind
+     let bindFunction = object.work.bind(object, 'JavaScript')
+     bindFunction();
+ </script> -->
+
+
+
+
+ <script>
+     const object = {
+         name: 'Sahil',
+         age: 23,
+         salary: 15000,
+         increment: 100,
+         totalSalary : function (decrement){
+             const totalsalary = this.salary + this.increment - decrement;
+             console.log(totalsalary)
+         }
+     }
+     object.totalSalary(100);
+
+     const bindFunction  = object.totalSalary.bind(object);
+     bindFunction(200);
+ </script>

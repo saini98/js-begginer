@@ -1,0 +1,28 @@
+$bg-primary: blue;
+$bg-warning: yellow;
+$bg-dark: black;
+$bg-light: #fff;
+$bg-danger: red;
+
+$text-primary: blue;
+$text-warning: yellow;
+$text-dark: black;
+$text-light: #fff;
+$text-danger: red;
+
+
+@mixin  flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+@mixin cards
+{
+    height: 100px;
+    width: 100px;
+    background-color: $bg-primary;
+    
+}
